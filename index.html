@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>穆虹辰 - 个人简历</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    :root {
+      --primary-color: #0a58ca;
+      --heading-color: #004c99;
+      --section-bg: #ffffffcc;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+      color: #333;
+      background: linear-gradient(-45deg, #e8f1fc, #d0e0ff, #f0f5ff, #cce0ff);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* === 视频头屏 === */
+    .intro-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+
+    .intro-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      font-family: "Segoe UI", "Microsoft YaHei";
+      opacity: 0;
+      animation: fadeInOverlay 2s ease forwards 1s;
+    }
+
+    @keyframes fadeInOverlay {
+      to { opacity: 1; }
+    }
+
+    .intro-overlay h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(10, 88, 202, 0.8);
+      margin: 0.2em 0;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      animation: bounce 2s infinite;
+      color: #8ab8ff;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* === 主体样式 === */
+    main.container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--section-bg);
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    main.container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: var(--heading-color);
+      border-bottom: 1.5px solid var(--primary-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .photo-container {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .photo {
+      width: 110px;
+      height: 150px;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(10, 88, 202, 0.4);
+    }
+
+    section {
+      margin-bottom: 1.8rem;
+      border-left: 4px solid var(--primary-color);
+      padding: 1rem 1.4rem;
+      background-color: #fff;
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+
+    td {
+      border: 1px solid #dce6f5;
+      padding: 0.45rem 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.8rem;
+      padding: 0.8rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .photo { width: 90px; height: 120px; }
+      main.container { margin: 1rem; padding: 1.2rem; }
+      .intro-overlay h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎥 开场视频 -->
+  <section class="intro-video">
+    <video autoplay muted playsinline loop>
+      <source src="school-logo.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+    <div class="intro-overlay">
+      <p class="scroll-down">↓ 向下滚动浏览简历</p>
+    </div>
+  </section>
+
+  <!-- 🌐 简历主体 -->
+  <main class="container" id="resume">
+    <div class="photo-container">
+      <img src="1.png" alt="贵州交通职业大学 校徽与校名" style="display:block;margin:auto;width:200px;">
+      <img src="2.jpg" alt="个人蓝底证件照" class="photo">
+    </div>
+
+    <section>
+
+      <h2>个人概况</h2>
+      <table>
+        <tr><td>姓名：穆虹辰</td><td>性别：男</td></tr>
+        <tr><td>出生年月：2006年**</td><td>政治面貌：共青团员</td></tr>
+        <tr><td>联系电话：157****9293</td><td>邮箱：hcm***st@outlook.com</td></tr>
+        <tr><td>求职意向：软件测试工程师</td><td>技术支持</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>教育背景</h2>
+      <ul>
+        <li>学校：贵州交通职业大学（2025年9月 - 2028年5月）</li>
+        <li>专业：计算机网络技术（职业本科）</li>
+        <li>主修课程：计算机网络基础、Python程序设计、Web前端开发、数据库原理与应用、软件测试与质量保证、物联网系统设计、Linux系统与网络管理、项目管理与实训</li>
+        <li>成绩排名：专业前15%</li>
+        <li>荣誉：国家励志奖学金、全国大学生数学竞赛三等奖、粤港澳机器人大赛一等奖</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>项目与实践经历</h2>
+      <ul>
+        <li><strong>智慧自习室系统（2025年3月）</strong><br>
+          校园创新项目，负责系统建模与考勤逻辑实现。基于Python与MQTT协议实现实时数据同步与可视化展示。
+        </li>
+        <li><strong>虚拟机器人编程任务挑战（2025年11月）</strong><br>
+          使用Python编写自动任务执行逻辑与路径规划算法，优化机器人运行效率约30%，在省级比赛中表现优异。
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>实习与校园经历</h2>
+      <ul>
+        <li><strong>厦门天马微电子有限公司（2025年2月 - 2025年9月）</strong><br>
+          担任操机员，参与机台调试与设备报警处理，学习生产流程与质量标准，积累现场协调与问题解决能力。
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>专业技能</h2>
+      <ul>
+        <li>编程语言：熟悉 HTML、C/C++；了解 Python、JavaScript</li>
+        <li>框架与工具：Arduino IDE、Flask、Vue.js、Mind+</li>
+        <li>软件平台：VS Code、Git、Navicat、Postman、Proteus</li>
+        <li>语言能力：英语四级，普通话一级甲等，高级CV工程师</li>
+        <li>软技能：团队协作、硬件调试、技术文档撰写、竞赛展示与汇报</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>自我评价</h2>
+      <p>
+        作为计算机网络技术专业学生，我具备扎实的软硬件编程基础与丰富的项目实践经验。
+        多次参加编程与创新比赛，培养了系统调试、测试优化及技术汇报能力。
+        我具有良好的学习能力与逻辑思维，未来希望在软件测试或技术支持岗位中继续深耕，
+        将实践经验转化为更高的工程质量与用户体验。
+      </p>
+    </section>
+
+   <footer>
+  © 2025 穆虹辰 | 个人简历  
+  <br>
+  <a href="https://beian.miit.gov.cn/" target="_blank" style="color:#6c8cd5;text-decoration:none;">
+    黔ICP备2025060040号
+  </a>
+</footer>
+
+  </main>
+
+  <script>
+    // === 视频结束后主体渐入 ===
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('main').classList.add('visible');
+      }, 2500);
+    });
+
+    // === 滚动出现动画 ===
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>
