@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>穆虹辰 - 个人简历</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    :root {
+      --primary-color: #0a58ca;
+      --light-bg: #f5f8fc;
+      --section-bg: #ffffff;
+      --border-color: #dce6f5;
+      --heading-color: #004c99;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+      color: #333;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #e8f1fc 0%, #f9fbff 100%);
+      border-bottom: 3px solid var(--primary-color);
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      width: 260px;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    main.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      background-color: transparent;
+    }
+
+    section {
+      background: var(--section-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+      border-left: 5px solid var(--primary-color);
+    }
+
+    h2 {
+      color: var(--heading-color);
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    /* 头像样式 - 上方居中 */
+    .photo-container {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .photo {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      background-color: #007bff;
+    }
+
+    .personal-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      min-width: 350px;
+    }
+
+    td {
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 0.9rem;
+      font-size: 0.95rem;
+      background-color: #fff;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.85rem;
+      padding: 1rem 0;
+      border-top: 1px solid #ddd;
+      background-color: #fafbff;
+    }
+
+    /* 响应式布局 */
+    @media (max-width: 768px) {
+      header img {
+        width: 200px;
+      }
+      section {
+        padding: 1rem 1.2rem;
+      }
+      .photo {
+        width: 130px;
+        height: 180px;
+      }
+      td {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="1.png" alt="贵州交通职业大学 校徽与校名">
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>个人概况</h2>
+      <div class="photo-container">
+        <img src="2.jpg" alt="个人蓝底证件照" class="photo">
+      </div>
+      <div class="personal-info">
+        <table>
+          <tr><td>姓名：穆虹辰</td><td>性别：男</td></tr>
+          <tr><td>出生年月：2006年10月</td><td>政治面貌：共青团员</td></tr>
+          <tr><td>联系电话：15710639293</td><td>邮箱：hcm693st@outlook.com</td></tr>
+          <tr><td>求职意向：软件测试工程师</td><td>技术支持</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育背景</h2>
+      <ul>
+        <li>学校：贵州交通职业大学（2025年9月 - 2028年5月）</li>
+        <li>专业：计算机网络技术（职业本科）</li>
+        <li>主修课程：计算机网络基础、Python程序设计、Web前端开发、数据库原理与应用、软件测试与质量保证、物联网系统设计、Linux系统与网络管理、项目管理与实训</li>
+        <li>成绩排名：专业前15%</li>
+        <li>学术荣誉：国家励志奖学金、全国大学生数学竞赛三等奖、贵州省信息素养提升实践活动一等奖、粤港澳机器人大赛一等奖</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>项目与实践经历</h2>
+      <ul>
+        <li><strong>智能机械导盲犬系统（2025年7月 - 2025年9月）</strong><br>
+          基于Arduino平台的个人创新项目，整合语音识别与图像识别模块，实现语音控制与避障导航。负责整体架构设计与核心代码编写，实现语音与视觉协同避障控制。
+        </li>
+        <li><strong>智慧自习室系统（2025年3月）</strong><br>
+          校园创新项目，负责系统建模与考勤逻辑实现。基于Python与MQTT协议实现实时数据同步与可视化展示。
+        </li>
+        <li><strong>虚拟机器人编程任务挑战（2025年11月）</strong><br>
+          使用Python编写自动任务执行逻辑与路径规划算法，优化机器人运行效率约30%，在省级比赛中表现优异。
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>实习与校园经历</h2>
+      <ul>
+        <li><strong>厦门天马微电子有限公司（2025年2月 - 2025年9月）</strong><br>
+          担任操机员，参与机台调试与设备报警处理，学习生产流程与质量标准，积累现场协调与问题解决能力。
+        </li>
+        <li>科技创新社成员，参与组织校园科技节及设备技术支持。</li>
+        <li>担任寝室长，负责宿舍管理与协调，锻炼了沟通与组织能力。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>专业技能</h2>
+      <ul>
+        <li>编程语言：熟悉 HTML、C/C++；了解 Python、JavaScript</li>
+        <li>框架与工具：熟悉 Arduino IDE、Flask 框架、了解 Vue.js 与 Mind+</li>
+        <li>软件平台：VS Code、Git、Navicat、Postman、Proteus</li>
+        <li>语言能力：英语四级，普通话一级甲等</li>
+        <li>软技能：团队协作、硬件调试、技术文档撰写、竞赛展示与汇报</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>自我评价</h2>
+      <p>
+        作为计算机网络技术专业学生，我具备扎实的软硬件编程基础与丰富的项目实践经验。
+        多次参加编程与创新比赛，培养了系统调试、测试优化及技术汇报能力。
+        我具有良好的学习能力与逻辑思维，未来希望在软件测试或技术支持岗位中继续深耕，
+        将实践经验转化为更高的工程质量与用户体验。
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 穆虹辰 | 个人简历
+  </footer>
+</body>
+</html>
